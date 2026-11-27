@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #FAF8F5;
+    color: #081C15;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-forest-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition-all duration-200 hover:bg-forest-700 hover:shadow-card active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-mint-100 px-6 py-3 text-sm font-semibold text-forest-700 transition-all duration-200 hover:bg-mint-200 active:scale-[0.98] disabled:opacity-50;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-forest-200 bg-white px-5 py-2.5 text-sm font-semibold text-forest-700 transition-all duration-200 hover:border-forest-400 hover:bg-forest-50 active:scale-[0.98];
+  }
+  .btn-peach {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-peach-300 px-6 py-3 text-sm font-semibold text-forest-900 shadow-soft transition-all duration-200 hover:bg-peach-400 hover:text-white active:scale-[0.98];
+  }
+  .card-warm {
+    @apply rounded-3xl border border-cream-300/80 bg-white p-6 shadow-soft transition-all duration-300;
+  }
+  .input-warm {
+    @apply w-full rounded-2xl border border-cream-300 bg-cream-50 px-4 py-3 text-sm text-forest-900 placeholder:text-forest-500/50 transition focus:border-forest-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-mint-100;
+  }
+}
